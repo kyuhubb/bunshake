@@ -69,7 +69,6 @@
 		}
 
 		textarea{
-			font-size: 0.5em;
 			width: 200px;
 			height: 100px;
 		}
@@ -86,7 +85,7 @@
 			hiragana　<span id='2'>0</span>　
 			katakana　<span id='3'>0</span><br><br>
 			<span class='purple'>kanji</span>　<span id='4'>0</span><br><br>
-			常用　<span id='5'>0</span>　(小学　<span id='6'>0</span>　│　中学　<span id='7'>0</span>)<br><br>
+			jôyô kanji　<span id='5'>0</span>　(小学　<span id='6'>0</span>　│　中学　<span id='7'>0</span>)<br><br>
 			non-jôyô　<span id='10'>0</span><br><br>
 			<span class='purple'>total</span>　<span id='9'>0</span><br>
 		</div>
@@ -231,7 +230,8 @@ function run(){
 		clc = clc/ungain;
 		var clc2 = chuu/unchuun;
 		var clc3 = shou/unshoun;
-		document.getElementsByTagName('body')[0].innerHTML+= '<div class="skuare">unique 小学 kanji : <span id="unshoun">'+unshoun+'</span><br>average repetition: <span id="unshoumult">x'+Math.round(clc3)+'</span><br><br><span id="unshou">'+unshou+'</span><br><br>unique 中学 kanji : <span id="unchuun">'+unchuun+'</span><br>average repetition: <span id="unchuumult">x'+Math.round(clc2)+'</span><br><br><span id="unchuu">'+unchuu+'</span><br><br>unique non-jôyô kanji: <span id="ungain">'+ungain+'</span><br>average repetition: <span id="ungaimult">x'+Math.round(clc)+'</span><br><br><span id="ungai">'+ungai+'</span></div>';
+		var unkanji = ungain+unshoun+unchuun
+		document.getElementsByTagName('body')[0].innerHTML+= '<div class="skuare"><center>Total unique kanji: '+unkanji+'</center><br><br>unique 小学 kanji : <span id="unshoun">'+unshoun+'</span><br>average repetition: <span id="unshoumult">x'+Math.round(clc3)+'</span><br><br><span id="unshou">'+unshou+'</span><br><br>unique 中学 kanji : <span id="unchuun">'+unchuun+'</span><br>average repetition: <span id="unchuumult">x'+Math.round(clc2)+'</span><br><br><span id="unchuu">'+unchuu+'</span><br><br>unique non-jôyô kanji: <span id="ungain">'+ungain+'</span><br>average repetition: <span id="ungaimult">x'+Math.round(clc)+'</span><br><br><span id="ungai">'+ungai+'</span></div>';
 	}
 	var shoud = 0;
 	var chuud = 0;
